@@ -1,0 +1,221 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+html,
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Quicksand', sans-serif;
+  overflow:hidden;
+    #background {
+        position: fixed;
+        top: 7%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background: url(polina.jpg) no-repeat;
+        background-size: cover;
+      overflow: hidden;
+      -webkit-filter: blur(5px);
+      -moz-filter: blur(5px);
+      -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+      filter: blur(5px);
+    }
+    .main {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+      
+
+        #content {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            min-height: 24px;
+            height: 100%;
+            position: relative;
+            text-align: center;
+            top: 33%;
+            .title {
+                color: #cc0000;
+                font-family: 'Quicksand', sans-serif;
+                font-size: 4rem;
+                text-transform: uppercase;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+                span {
+                    font-size: 4rem;
+                    cursor: pointer
+                }
+                &:hover {
+                    -webkit-animation: MISSION-HOVER 1.5s infinite;
+                    -moz-animation: MISSION-HOVER 1.5s infinite;
+                    -o-animation: MISSION-HOVER 1.5s infinite;
+                    animation: MISSION-HOVER 1.5s infinite;
+                    animation-direction: alternate;
+                    animation-timing-function: ease;
+                }
+                @-webkit-keyframes MISSION-HOVER {
+                    0%, 100% {
+                        font-size: 4rem;
+                        color: white;
+                    }
+                    50% {
+                        color: black;
+                        letter-spacing: 5px;
+                        text-shadow: 0px 0px 30px rgba(191, 252, 255, 1);
+                    }
+                }
+            }
+            p {
+                color: #E6DBAE;
+                font-family: 'Quicksand', sans-serif;
+                font-size: 1.5rem;
+                margin: 0 auto;
+                padding: 0;
+                letter-spacing: .5rem;
+                text-transform: uppercase;
+                &:last-child {
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    margin: 3em auto;
+                    padding: 0;
+                    letter-spacing: .1rem;
+                    > a {
+                        text-decoration: none;
+                        color: inherit;
+                        -moz-transition: all .2s ease-in;
+                        -o-transition: all .2s ease-in;
+                        -webkit-transition: all .2s ease-in;
+                        transition: all .2s ease-in;
+                        &:hover {
+                            color: #fff
+                        }
+                    }
+                }
+            }
+            section {
+                color: #fff;
+                margin: 0 auto;
+                line-height: 24px;
+                font-size: 1rem;
+                font-weight: 700;
+                ul {
+                    list-style-type: none;
+                    margin-bottom: 0;
+                    margin-left: 0;
+                    li {
+                        display: inline-block;
+                        margin-right: 2rem;
+                        width: 6rem;
+                    }
+                }
+                .timenumbers {
+                    display: block;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    line-height: 1.5rem;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+                p.timedescription {
+                    font-size: .5rem;
+                    font-variant: small-caps;
+                    line-height: 1.5rem;
+                    margin: 0 auto;
+                    text-align: center;
+                    position: relative;
+                    top: 0px;
+                }
+            }
+        }
+    }
+}
+
+body{
+	background-color: white;
+	background-image: url("http://subtlepatterns.com/patterns/purty_wood.png");
+	background-position: center top;
+	background-repeat: repeat;
+}
+
+h1{
+	text-align: center;
+	color: rgba(0,0,0,0.8);
+	font-size: 100px;
+	padding-bottom: 100px;
+	text-shadow: 0 -3px 0 #333,
+		0 3px 4px rgba(0,0,0, 0.4),
+		0 4px 5px rgba(0,0,0, 0.15),
+		0 14px 5px rgba(0,0,0, 0.18),
+		0 6px 5px rgba(0,0,0, 0.21);
+}
+
+h2{
+	padding-bottom: 30px;
+	text-align: center;
+	font-size: 34px;
+}
+
+p{
+	margin-bottom: 40px;
+	font-size: 16px;
+}
+
+.holder{
+	width: 600px;
+	margin: 300px auto 100px;
+	position: relative;
+}
+
+@import "bourbon";
+
+$facebook: #4C66A4;
+$googleplus: #dd4b39;
+$twitter: #2c77ba;
+$blackdotted: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAE0lEQVQIW2NkYGD4D8SMjEACDAAOKQEDKKNmJgAAAABJRU5ErkJggg==) repeat;
+
+body {
+	background: #333 $blackdotted;
+	padding-top: 150px;
+	font: normal 100%/1.5 Arial;
+	color: white;
+	text-align: center;
+}
+
+.shares {
+	padding-top: 20px;
+  
+  > a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+.googleplus {
+	@include button($googleplus);
+  font-size: em(18);
+}
+
+.twitter {
+	@include button($twitter);
+  font-size: em(18);
+}
+
+.facebook {
+	@include button($facebook);
+  font-size: em(18);
+}
+
+
